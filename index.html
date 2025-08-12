@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ProdigyTech — Premium Landing</title>
+
+  <!-- Global style + page-specific styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Prodigy<span>Tech</span></div>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="cta">Get Quote</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <h1 class="hero-title">Crafting Modern Web Experiences</h1>
+      <p class="hero-sub">Responsive, secure and visually stunning web applications tailored to your brand.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#services">Explore Services</a>
+        <a class="btn ghost" href="#about">About Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="container services">
+    <h2 class="section-title">Services</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon">💻</div>
+        <h3>Web Development</h3>
+        <p>Fast, accessible, and maintainable frontends with clean UX.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🔒</div>
+        <h3>Secure Apps</h3>
+        <p>Security-first approach: authentication, hashing and session control.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Real-Time Chat</h3>
+        <p>WebSocket-based chat systems and notifications.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about container">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-grid">
+      <!-- left: text -->
+      <div class="about-text">
+        <h3>Hi, I'm <span class="accent">Yaswanth</span></h3>
+        <p>
+          I build premium web applications with strong emphasis on responsive UI and security.
+          My focus is to deliver products that look great and perform reliably under real-world usage.
+        </p>
+        <p>
+          I enjoy building full-stack features — authentication, CRUD systems, real-time chat, and
+          polished frontend experiences.
+        </p>
+        <div class="about-cta">
+          <a href="#contact" class="btn primary">Work with me</a>
+          <a href="#" class="btn ghost">View GitHub</a>
+        </div>
+      </div>
+
+      <!-- right: highlights & skill bars (no photo) -->
+      <div class="about-highlights">
+        <div class="glass">
+          <h4>Highlights</h4>
+          <ul class="highlights-list">
+            <li>Full-Stack Web Projects</li>
+            <li>End-to-End Encryption (E2E)</li>
+            <li>Responsive & Accessible UI</li>
+            <li>Internship: Prodigy InfoTech (Aug 2025)</li>
+          </ul>
+
+          <h4>Skills</h4>
+          <div class="skill">
+            <label>Web Development</label>
+            <div class="progress" data-value="90"><span></span></div>
+          </div>
+          <div class="skill">
+            <label>Cybersecurity</label>
+            <div class="progress" data-value="85"><span></span></div>
+          </div>
+          <div class="skill">
+            <label>React / JS</label>
+            <div class="progress" data-value="80"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact container">
+    <h2 class="section-title">Get In Touch</h2>
+    <form class="contact-form" onsubmit="return false;">
+      <input type="text" name="name" placeholder="Your name" required/>
+      <input type="email" name="email" placeholder="Your email" required/>
+      <textarea name="message" rows="5" placeholder="Brief message"></textarea>
+      <button class="btn primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 ProdigyTech • Designed by Yaswanth</p>
+    </div>
+  </footer>
+
+  <script src="js/animation.js"></script>
+</body>
+</html>

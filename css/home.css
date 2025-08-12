@@ -1,0 +1,32 @@
+/* home.css - hero + services layout */
+
+.hero {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: radial-gradient(circle at 10% 10%, rgba(13,110,253,0.95), rgba(102,16,242,0.85) 40%, transparent 60%),
+              linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.25));
+  padding: 80px 0;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner { text-align: center; max-width: 960px; margin: 0 auto; position: relative; z-index: 2; }
+.hero-title { font-size: clamp(30px, 6vw, 56px); line-height: 1.02; margin-bottom: 18px; font-weight: 800; letter-spacing: -0.02em; }
+.hero-sub { font-size: 18px; opacity: 0.95; margin-bottom: 20px; }
+
+.hero-actions { display:flex; gap: 12px; justify-content:center; flex-wrap:wrap; }
+
+.services { padding: 60px 0 40px; text-align: center; }
+.services .section-title { margin-bottom: 28px; color: #0f172a; }
+.cards { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+.card { background: #fff; color:#111; width:280px; padding:22px; border-radius:12px; box-shadow: 0 12px 30px rgba(2,6,23,0.08); transition: transform .28s ease, box-shadow .28s ease; text-align:left; }
+.card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(2,6,23,0.12); }
+.card h3 { margin-top:8px; margin-bottom:8px; font-size: 1.05rem; }
+.card p { color: #444; font-size: 0.95rem; }
+
+/* small visual icon block in card */
+.card .card-icon { font-size: 28px; }

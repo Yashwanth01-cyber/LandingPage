@@ -1,0 +1,51 @@
+/* style.css - global layout & utilities */
+
+:root{
+  --container:1100px;
+  --bg-dark: #071022;
+  --muted: #9fb3c8;
+  --accent: #00d1ff;
+  --gold: #ffd700;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, sans-serif;
+  background: linear-gradient(180deg,#071022 0%, #0b1724 40%, #071428 100%);
+  color: #e6f2ff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* container utility */
+.container{width:90%;max-width:var(--container);margin:0 auto}
+
+/* header */
+.site-header { position: sticky; top:0; z-index:120; backdrop-filter: blur(6px); background: linear-gradient(90deg, rgba(4,10,25,0.65), rgba(8,15,30,0.45)); border-bottom:1px solid rgba(255,255,255,0.02); }
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-weight:800;color:#fff;font-size:1.15rem}
+.brand span{color:var(--gold)}
+
+/* nav */
+.main-nav{display:flex;gap:18px}
+.main-nav a{color:rgba(255,255,255,0.86);text-decoration:none;font-weight:600;padding:6px 8px;border-radius:6px;transition:all .18s}
+.main-nav a:hover, .main-nav a.active{color:var(--accent);transform:translateY(-2px)}
+
+/* CTA */
+.cta{background:var(--gold);border:none;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,183,0,0.12)}
+
+/* buttons */
+.btn{display:inline-block;padding:11px 18px;border-radius:999px;text-decoration:none;font-weight:700}
+.btn.primary{background:var(--gold);color:#0b0b0b}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:inherit}
+
+/* section title */ 
+.section-title{font-size:1.2rem;margin-bottom:8px;color:var(--accent);text-align:center}
+
+/* contact form small styles */
+.contact-form { display:flex;flex-direction:column;gap:12px;max-width:720px;margin:18px auto 0 }
+.contact-form input, .contact-form textarea { padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit;outline:none }
+.contact-form button{width:170px;align-self:center}
+.site-footer{padding:22px 0;text-align:center;margin-top:40px;background:linear-gradient(90deg, rgba(0,0,0,0.18), rgba(0,0,0,0.1));border-top:1px solid rgba(255,255,255,0.02)}
