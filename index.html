@@ -16,11 +16,12 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">Prodigy<span>Tech</span></div>
-      <nav class="main-nav">
+      <nav class="main-nav" id="nav-links">
         <a href="index.html" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
+        <!-- Auth links will be inserted dynamically -->
       </nav>
       <button class="cta">Get Quote</button>
     </div>
@@ -65,7 +66,6 @@
     <h2 class="section-title">About Me</h2>
 
     <div class="about-grid">
-      <!-- left: text -->
       <div class="about-text">
         <h3>Hi, I'm <span class="accent">Yaswanth</span></h3>
         <p>
@@ -82,7 +82,6 @@
         </div>
       </div>
 
-      <!-- right: highlights & skill bars (no photo) -->
       <div class="about-highlights">
         <div class="glass">
           <h4>Highlights</h4>
@@ -130,5 +129,27 @@
   </footer>
 
   <script src="js/animation.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    // Simple navbar auth state handler
+    const navLinks = document.getElementById('nav-links');
+    const user = localStorage.getItem('user');
+
+    if (user) {
+      navLinks.innerHTML += `
+        <span>Welcome, ${user}</span>
+        <a href="#" id="logout-link">Logout</a>
+      `;
+      document.getElementById('logout-link').addEventListener('click', () => {
+        localStorage.removeItem('user');
+        location.reload();
+      });
+    } else {
+      navLinks.innerHTML += `
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      `;
+    }
+  </script>
 </body>
 </html>
